@@ -7,6 +7,15 @@ Based on Nordic's SDK15, this code example uses the nRF52's I2S interface to com
 - More flexible transmission rates (3.2MHz)
 - Larger EasyDMA max buffer size
 
+# Running the Example Project
+- nRF52832 DK
+- Strip of SK6812 LED's
+- Segger Embedded Studio
+- Open project:
+/nRF5_SDK_15.0.0_a53641a/examples/peripheral/sk6812_i2s/pca10040/blank/ses/sk6812_i2s_pca10040.emProject
+- Build --> Build and Run
+
+
 # Code
 ```
 // NEO_GRB indicates a NeoPixel-compatible
