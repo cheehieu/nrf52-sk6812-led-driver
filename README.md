@@ -1,5 +1,9 @@
 # nrf52-sk6812-led-driver
+*A better README is TBD...*
+
 Based on Nordic's SDK15, this code example uses the nRF52's I2S interface to communicate with SK6812 single-wire-based LED pixels.
+
+![sk6812_i2s_demo](https://user-images.githubusercontent.com/1174029/41619371-d81626dc-73ba-11e8-8d70-bb192ae76be1.jpg)
 
 # Overview
 - Differences to WS2812B "Neopixels"
