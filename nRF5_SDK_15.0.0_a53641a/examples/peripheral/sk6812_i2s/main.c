@@ -58,7 +58,8 @@
 #include "nrf_log_default_backends.h"
 
 #define LED_DIN_PIN		    2
-#define LED_CLK_PIN		    11
+#define LED_LRCK_PIN		    11
+#define LED_SCK_PIN		    18
 #define NUM_LEDS		    9
 #define DATA_BYTES_PER_LED	    3	// 24-bit GRB data structure
 #define LEDS_DATA_BYTE_SIZE	    NUM_LEDS * DATA_BYTES_PER_LED
@@ -140,8 +141,8 @@ void data_handler(nrf_drv_i2s_buffers_t const * p_released, uint32_t status) {
  */
 void sk6812_i2s_init() {
     nrf_drv_i2s_config_t config;     //= NRF_DRV_I2S_DEFAULT_CONFIG;
-    config.sck_pin	= NRF_DRV_I2S_PIN_NOT_USED; // I2S_CONFIG_SCK_PIN
-    config.lrck_pin	= LED_CLK_PIN;	// I2S_CONFIG_LRCK_PIN
+    config.sck_pin	= LED_SCK_PIN;	// Don't set NRF_DRV_I2S_PIN_NOT_USED for I2S_CONFIG_SCK_PIN. (The program will stack.) 
+    config.lrck_pin	= LED_LRCK_PIN; // I2S_CONFIG_LRCK_PIN
     config.mck_pin	= NRF_DRV_I2S_PIN_NOT_USED;
     config.sdout_pin	= LED_DIN_PIN;	// I2S_CONFIG_SDOUT_PIN
     config.sdin_pin	= NRF_DRV_I2S_PIN_NOT_USED;
@@ -350,7 +351,7 @@ int main(void) {
     err_code = NRF_LOG_INIT(NULL);
     APP_ERROR_CHECK(err_code);
     NRF_LOG_DEFAULT_BACKENDS_INIT();
-    NRF_LOG_INFO("SK6812 I2S example started.");
+    NRF_LOG_INFO("nRF52 I2S and SK6812 LED example started.");
     NRF_LOG_FLUSH();
 
     // Ported LED paint animations from Adafruit's Neopixel library
