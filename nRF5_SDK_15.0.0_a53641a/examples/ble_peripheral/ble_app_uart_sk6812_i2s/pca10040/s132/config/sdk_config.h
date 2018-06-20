@@ -1542,7 +1542,7 @@
 // <7=> 7 
 
 #ifndef I2S_CONFIG_IRQ_PRIORITY
-#define I2S_CONFIG_IRQ_PRIORITY 2   // 7
+#define I2S_CONFIG_IRQ_PRIORITY 6   //2   // 7
 #endif
 
 // <e> I2S_CONFIG_LOG_ENABLED - Enables logging in the module.

@@ -124,7 +124,7 @@ static ble_uuid_t m_adv_uuids[]          =                                      
 #define LED_DIN_PIN		    2
 #define LED_LRCK_PIN		    11
 #define LED_SCK_PIN		    18
-#define NUM_LEDS		    9
+#define NUM_LEDS		    21	//9
 #define DATA_BYTES_PER_LED	    3	// 24-bit GRB data structure
 #define LEDS_DATA_BYTE_SIZE	    NUM_LEDS * DATA_BYTES_PER_LED
 
