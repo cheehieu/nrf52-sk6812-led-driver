@@ -41,6 +41,7 @@
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrfx_prs.o"
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrfx_uart.o"
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrfx_uarte.o"
+"Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrfx_i2s.o"
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/bsp.o"
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/bsp_btn_ble.o"
 "Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/main.o"

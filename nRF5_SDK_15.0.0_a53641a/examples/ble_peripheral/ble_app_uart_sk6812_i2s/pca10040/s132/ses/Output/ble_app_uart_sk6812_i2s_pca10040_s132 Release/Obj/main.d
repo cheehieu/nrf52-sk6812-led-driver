@@ -109,4 +109,8 @@ Output/ble_app_uart_sk6812_i2s_pca10040_s132\ Release/Obj/main.o: \
  ../../../../../../components/libraries/experimental_memobj/nrf_memobj.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 3.34a/include/stdlib.h \
  ../../../../../../components/libraries/balloc/nrf_balloc.h \
- ../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h
+ ../../../../../../components/libraries/experimental_log/nrf_log_default_backends.h \
+ ../../../../../../integration/nrfx/legacy/nrf_drv_i2s.h \
+ ../../../../../../modules/nrfx/drivers/include/nrfx_i2s.h \
+ ../../../../../../modules/nrfx/hal/nrf_i2s.h \
+ ../../../../../../components/libraries/delay/nrf_delay.h
