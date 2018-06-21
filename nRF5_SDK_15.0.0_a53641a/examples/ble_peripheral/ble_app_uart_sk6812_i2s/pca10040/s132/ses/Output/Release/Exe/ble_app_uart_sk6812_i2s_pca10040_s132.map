@@ -14753,7 +14753,7 @@ OUTPUT(Output/Release/Exe/ble_app_uart_sk6812_i2s_pca10040_s132.elf elf32-little
  .comment       0x000000000000004c       0x4d C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .comment       0x000000000000004c       0x4d C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libvfprintf_v7em_fpv4_sp_d16_hard_t_le_eabi.o
 
-.debug_line     0x0000000000000000    0x22bb1
+.debug_line     0x0000000000000000    0x22bb3
  .debug_line    0x0000000000000000      0x2b5 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/thumb_crt0.o
  .debug_line    0x00000000000002b5      0xbf9 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_log_backend_rtt.o
  .debug_line    0x0000000000000eae      0x94c Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_log_backend_serial.o
@@ -14794,20 +14794,20 @@ OUTPUT(Output/Release/Exe/ble_app_uart_sk6812_i2s_pca10040_s132.elf elf32-little
  .debug_line    0x0000000000013f3e      0xdd6 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrfx_i2s.o
  .debug_line    0x0000000000014d14      0xba4 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/bsp.o
  .debug_line    0x00000000000158b8     0x1101 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/bsp_btn_ble.o
- .debug_line    0x00000000000169b9     0x1d50 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/main.o
- .debug_line    0x0000000000018709      0xaaf Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/SEGGER_RTT.o
- .debug_line    0x00000000000191b8      0xd68 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_advdata.o
- .debug_line    0x0000000000019f20     0x12c0 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_advertising.o
- .debug_line    0x000000000001b1e0      0xd42 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_conn_params.o
- .debug_line    0x000000000001bf22     0x1152 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_conn_state.o
- .debug_line    0x000000000001d074      0xa42 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_link_ctx_manager.o
- .debug_line    0x000000000001dab6      0xaf1 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_srv_common.o
- .debug_line    0x000000000001e5a7      0xd26 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_ble_gatt.o
- .debug_line    0x000000000001f2cd      0xacd Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_ble_qwr.o
- .debug_line    0x000000000001fd9a      0xdab Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_nus.o
- .debug_line    0x0000000000020b45      0xbaf Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh.o
- .debug_line    0x00000000000216f4      0xc21 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh_ble.o
- .debug_line    0x0000000000022315      0x89c Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh_soc.o
+ .debug_line    0x00000000000169b9     0x1d52 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/main.o
+ .debug_line    0x000000000001870b      0xaaf Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/SEGGER_RTT.o
+ .debug_line    0x00000000000191ba      0xd68 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_advdata.o
+ .debug_line    0x0000000000019f22     0x12c0 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_advertising.o
+ .debug_line    0x000000000001b1e2      0xd42 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_conn_params.o
+ .debug_line    0x000000000001bf24     0x1152 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_conn_state.o
+ .debug_line    0x000000000001d076      0xa42 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_link_ctx_manager.o
+ .debug_line    0x000000000001dab8      0xaf1 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_srv_common.o
+ .debug_line    0x000000000001e5a9      0xd26 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_ble_gatt.o
+ .debug_line    0x000000000001f2cf      0xacd Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_ble_qwr.o
+ .debug_line    0x000000000001fd9c      0xdab Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/ble_nus.o
+ .debug_line    0x0000000000020b47      0xbaf Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh.o
+ .debug_line    0x00000000000216f6      0xc21 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh_ble.o
+ .debug_line    0x0000000000022317      0x89c Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/nrf_sdh_soc.o
 
 .debug_info     0x0000000000000000    0x72ef3
  .debug_info    0x0000000000000000      0x106 Output/ble_app_uart_sk6812_i2s_pca10040_s132 Release/Obj/thumb_crt0.o

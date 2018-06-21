@@ -375,12 +375,14 @@ int main(void) {
     theater_chase(127, 127, 127, 50); // White
     theater_chase(127, 0, 0, 50); // Red
     theater_chase(0, 0, 127, 50); // Blue
-
     rainbow(20);
     rainbow_cycle(20);
     theater_chase_rainbow(50);
-
     clear_leds();
+    
+    // Stop and uninitialize the I2S interface to reduce current consumption
+//    nrf_drv_i2s_stop();
+//    nrf_drv_i2s_uninit();
 }
 
 /** @} */

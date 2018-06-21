@@ -1047,6 +1047,10 @@ int main(void)
     advertising_start();
     
     clear_leds();
+    
+    // Stop and uninitialize the I2S interface to reduce current consumption
+//    nrf_drv_i2s_stop();
+//    nrf_drv_i2s_uninit();
 
     // Enter main loop.
     for (;;)
