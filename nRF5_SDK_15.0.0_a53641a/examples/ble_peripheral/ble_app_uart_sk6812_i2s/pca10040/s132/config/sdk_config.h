@@ -1542,13 +1542,13 @@
 // <7=> 7 
 
 #ifndef I2S_CONFIG_IRQ_PRIORITY
-#define I2S_CONFIG_IRQ_PRIORITY 6   //2   // 7
+#define I2S_CONFIG_IRQ_PRIORITY 2   // 7
 #endif
 
 // <e> I2S_CONFIG_LOG_ENABLED - Enables logging in the module.
 //==========================================================
 #ifndef I2S_CONFIG_LOG_ENABLED
-#define I2S_CONFIG_LOG_ENABLED 0
+#define I2S_CONFIG_LOG_ENABLED 1    // 0
 #endif
 // <o> I2S_CONFIG_LOG_LEVEL  - Default Severity level
  
@@ -1559,7 +1559,7 @@
 // <4=> Debug 
 
 #ifndef I2S_CONFIG_LOG_LEVEL
-#define I2S_CONFIG_LOG_LEVEL 3
+#define I2S_CONFIG_LOG_LEVEL 4	// 3
 #endif
 
 // <o> I2S_CONFIG_INFO_COLOR  - ANSI escape code prefix.

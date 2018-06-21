@@ -4337,7 +4337,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ >= __FLASH_segment_start__) && (__init_rodata_end__ <= __FLASH_segment_end__))), error: .init_rodata is too large to fit in FLASH memory segment)
                 0x00000000000002f4                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x00000000000002f4     0x26f0
+.text           0x00000000000002f4     0x26f4
                 0x00000000000002f4                __text_start__ = .
  *(.text .text.* .glue_7t .glue_7 .gnu.linkonce.t.* .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x00000000000002f4        0x0 linker stubs
@@ -4567,87 +4567,87 @@ Linker script and memory map
                 0x00000000000020dc       0x24 Output/sk6812_i2s_pca10040 Release/Obj/main.o
                 0x00000000000020dc                sk6812_i2s_init_mem
  .text.sk6812_i2s_init
-                0x0000000000002100       0x5c Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x0000000000002100       0x54 Output/sk6812_i2s_pca10040 Release/Obj/main.o
                 0x0000000000002100                sk6812_i2s_init
  .text.convert_byte_to_i2s_bits
-                0x000000000000215c       0x24 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x000000000000215c                convert_byte_to_i2s_bits
+                0x0000000000002154       0x24 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x0000000000002154                convert_byte_to_i2s_bits
  .text.set_i2s_led_data
-                0x0000000000002180       0x38 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x0000000000002180                set_i2s_led_data
+                0x0000000000002178       0x38 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x0000000000002178                set_i2s_led_data
  .text.send_i2s_led_data
-                0x00000000000021b8       0x28 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x00000000000021b8                send_i2s_led_data
+                0x00000000000021b0       0x34 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x00000000000021b0                send_i2s_led_data
  .text.clear_leds
-                0x00000000000021e0       0x18 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x00000000000021e0                clear_leds
+                0x00000000000021e4       0x18 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x00000000000021e4                clear_leds
  .text.color_wipe
-                0x00000000000021f8       0x3c Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x00000000000021f8                color_wipe
- .text.wheel    0x0000000000002234       0x7c Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x0000000000002234                wheel
- .text.rainbow  0x00000000000022b0       0x58 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x00000000000022b0                rainbow
+                0x00000000000021fc       0x3c Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x00000000000021fc                color_wipe
+ .text.wheel    0x0000000000002238       0x7c Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x0000000000002238                wheel
+ .text.rainbow  0x00000000000022b4       0x58 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x00000000000022b4                rainbow
  .text.rainbow_cycle
-                0x0000000000002308       0x58 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x0000000000002308                rainbow_cycle
+                0x000000000000230c       0x58 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x000000000000230c                rainbow_cycle
  .text.theater_chase
-                0x0000000000002360       0x90 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x0000000000002360                theater_chase
+                0x0000000000002364       0x90 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x0000000000002364                theater_chase
  .text.theater_chase_rainbow
-                0x00000000000023f0       0xa8 Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x00000000000023f0                theater_chase_rainbow
+                0x00000000000023f4       0xa8 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x00000000000023f4                theater_chase_rainbow
  .text.startup.main
-                0x0000000000002498       0x9c Output/sk6812_i2s_pca10040 Release/Obj/main.o
-                0x0000000000002498                main
+                0x000000000000249c       0x9c Output/sk6812_i2s_pca10040 Release/Obj/main.o
+                0x000000000000249c                main
  .text.errata_57
-                0x0000000000002534       0x34 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+                0x0000000000002538       0x34 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
  .text.errata_136
-                0x0000000000002568       0x40 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+                0x000000000000256c       0x40 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
  .text.SystemInit
-                0x00000000000025a8      0x264 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
-                0x00000000000025a8                SystemInit
+                0x00000000000025ac      0x264 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+                0x00000000000025ac                SystemInit
  .text.libc.__RAL_ascii_isctype
-                0x000000000000280c       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002810       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_toupper
-                0x0000000000002828        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x000000000000282c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_tolower
-                0x0000000000002834        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002838        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_iswctype
-                0x0000000000002840       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002844       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_towupper
-                0x000000000000285c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002860        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_towlower
-                0x0000000000002868        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x000000000000286c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
  .text.libc.__RAL_ascii_wctomb
-                0x0000000000002874        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000002874                __RAL_ascii_wctomb
+                0x0000000000002878        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002878                __RAL_ascii_wctomb
  .text.libc.__RAL_ascii_mbtowc
-                0x0000000000002882       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x0000000000002882                __RAL_ascii_mbtowc
- *fill*         0x00000000000028a6        0x2 
+                0x0000000000002886       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x0000000000002886                __RAL_ascii_mbtowc
+ *fill*         0x00000000000028aa        0x2 
  .text.libc.__RAL_isctype
-                0x00000000000028a8       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x00000000000028a8                __RAL_isctype
+                0x00000000000028ac       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x00000000000028ac                __RAL_isctype
  .text.libc.isprint
-                0x00000000000028bc        0xa C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
-                0x00000000000028bc                isprint
- *fill*         0x00000000000028c6        0x2 
+                0x00000000000028c0        0xa C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
+                0x00000000000028c0                isprint
+ *fill*         0x00000000000028ca        0x2 
  .text.libc.memcpy
-                0x00000000000028c8       0x54 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x00000000000028c8                __aeabi_memcpy
-                0x00000000000028c8                memcpy
-                0x00000000000028d4                __aeabi_memcpy8
-                0x00000000000028d4                __aeabi_memcpy4
+                0x00000000000028cc       0x54 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x00000000000028cc                __aeabi_memcpy
+                0x00000000000028cc                memcpy
+                0x00000000000028d8                __aeabi_memcpy8
+                0x00000000000028d8                __aeabi_memcpy4
  .text.libc.memset
-                0x000000000000291c       0x68 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x000000000000291c                memset
+                0x0000000000002920       0x68 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x0000000000002920                memset
  .text.libc.strlen
-                0x0000000000002984       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
-                0x0000000000002984                strlen
-                0x00000000000029e4                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x00000000000026f0                __text_size__ = SIZEOF (.text)
-                0x00000000000029e4                __text_load_end__ = __text_end__
+                0x0000000000002988       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2_asm.o)
+                0x0000000000002988                strlen
+                0x00000000000029e8                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x00000000000026f4                __text_size__ = SIZEOF (.text)
+                0x00000000000029e8                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -4658,63 +4658,63 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 Output/sk6812_i2s_pca10040 Release/Obj/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ >= __FLASH_segment_start__) && (__text_end__ <= __FLASH_segment_end__))), error: .text is too large to fit in FLASH memory segment)
-                0x00000000000029e4                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
+                0x00000000000029e8                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
 
 .log_const_data
-                0x00000000000029e4       0x30
-                0x00000000000029e4                __log_const_data_start__ = .
-                0x00000000000029e4                __start_log_const_data = __log_const_data_start__
+                0x00000000000029e8       0x30
+                0x00000000000029e8                __log_const_data_start__ = .
+                0x00000000000029e8                __start_log_const_data = __log_const_data_start__
  *(SORT(.log_const_data*))
  .log_const_data_I2S
-                0x00000000000029e4        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_i2s.o
-                0x00000000000029e4                m_nrf_log_I2S_logs_data_const
+                0x00000000000029e8        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_i2s.o
+                0x00000000000029e8                m_nrf_log_I2S_logs_data_const
  .log_const_data_PRS
-                0x00000000000029ec        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
-                0x00000000000029ec                m_nrf_log_PRS_logs_data_const
+                0x00000000000029f0        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
+                0x00000000000029f0                m_nrf_log_PRS_logs_data_const
  .log_const_data_UART
-                0x00000000000029f4        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
-                0x00000000000029f4                m_nrf_log_UART_logs_data_const
+                0x00000000000029f8        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
+                0x00000000000029f8                m_nrf_log_UART_logs_data_const
  .log_const_data_UARTE
-                0x00000000000029fc        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
-                0x00000000000029fc                m_nrf_log_UARTE_logs_data_const
+                0x0000000000002a00        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
+                0x0000000000002a00                m_nrf_log_UARTE_logs_data_const
  .log_const_data_app
-                0x0000000000002a04        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
-                0x0000000000002a04                m_nrf_log_app_logs_data_const
+                0x0000000000002a08        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
+                0x0000000000002a08                m_nrf_log_app_logs_data_const
  .log_const_data_balloc_log_mempool
-                0x0000000000002a0c        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
-                0x0000000000002a0c                m_nrf_log_balloc_log_mempool_logs_data_const
-                0x0000000000002a14                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
+                0x0000000000002a10        0x8 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
+                0x0000000000002a10                m_nrf_log_balloc_log_mempool_logs_data_const
+                0x0000000000002a18                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
                 0x0000000000000030                __log_const_data_size__ = SIZEOF (.log_const_data)
-                0x0000000000002a14                __stop_log_const_data = __log_const_data_end__
-                0x0000000000002a14                __log_const_data_load_end__ = __log_const_data_end__
+                0x0000000000002a18                __stop_log_const_data = __log_const_data_end__
+                0x0000000000002a18                __log_const_data_load_end__ = __log_const_data_end__
                 0x0000000000000001                . = ASSERT (((__log_const_data_start__ == __log_const_data_end__) || ((__log_const_data_end__ >= __FLASH_segment_start__) && (__log_const_data_end__ <= __FLASH_segment_end__))), error: .log_const_data is too large to fit in FLASH memory segment)
-                0x0000000000002a14                __nrf_balloc_load_start__ = ALIGN (__log_const_data_end__, 0x4)
+                0x0000000000002a18                __nrf_balloc_load_start__ = ALIGN (__log_const_data_end__, 0x4)
 
-.nrf_balloc     0x0000000000002a14       0x18
-                0x0000000000002a14                __nrf_balloc_start__ = .
-                0x0000000000002a14                __start_nrf_balloc = __nrf_balloc_start__
+.nrf_balloc     0x0000000000002a18       0x18
+                0x0000000000002a18                __nrf_balloc_start__ = .
+                0x0000000000002a18                __start_nrf_balloc = __nrf_balloc_start__
  *(.nrf_balloc*)
- .nrf_balloc    0x0000000000002a14       0x18 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
-                0x0000000000002a14                log_mempool
-                0x0000000000002a2c                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
+ .nrf_balloc    0x0000000000002a18       0x18 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
+                0x0000000000002a18                log_mempool
+                0x0000000000002a30                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
                 0x0000000000000018                __nrf_balloc_size__ = SIZEOF (.nrf_balloc)
-                0x0000000000002a2c                __stop_nrf_balloc = __nrf_balloc_end__
-                0x0000000000002a2c                __nrf_balloc_load_end__ = __nrf_balloc_end__
+                0x0000000000002a30                __stop_nrf_balloc = __nrf_balloc_end__
+                0x0000000000002a30                __nrf_balloc_load_end__ = __nrf_balloc_end__
                 0x0000000000000001                . = ASSERT (((__nrf_balloc_start__ == __nrf_balloc_end__) || ((__nrf_balloc_end__ >= __FLASH_segment_start__) && (__nrf_balloc_end__ <= __FLASH_segment_end__))), error: .nrf_balloc is too large to fit in FLASH memory segment)
-                0x0000000000002a2c                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
+                0x0000000000002a30                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
 
-.nrf_sections   0x0000000000002a2c        0x0
-                0x0000000000002a2c                __nrf_sections_start__ = .
-                0x0000000000002a2c                __start_nrf_sections = __nrf_sections_start__
+.nrf_sections   0x0000000000002a30        0x0
+                0x0000000000002a30                __nrf_sections_start__ = .
+                0x0000000000002a30                __start_nrf_sections = __nrf_sections_start__
  *(.nrf_sections .nrf_sections.*)
-                0x0000000000002a2c                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
+                0x0000000000002a30                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
                 0x0000000000000000                __nrf_sections_size__ = SIZEOF (.nrf_sections)
-                0x0000000000002a2c                __nrf_sections_load_end__ = __nrf_sections_end__
+                0x0000000000002a30                __nrf_sections_load_end__ = __nrf_sections_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_start__ == __nrf_sections_end__) || ((__nrf_sections_end__ >= __FLASH_segment_start__) && (__nrf_sections_end__ <= __FLASH_segment_end__))), error: .nrf_sections is too large to fit in FLASH memory segment)
-                0x0000000000002a2c                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
+                0x0000000000002a30                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
 
 .log_dynamic_data
-                0x0000000020000000       0x18 load address 0x0000000000002a2c
+                0x0000000020000000       0x18 load address 0x0000000000002a30
                 0x0000000020000000                __log_dynamic_data_start__ = .
  *(SORT(.log_dynamic_data*))
  .log_dynamic_data_I2S
@@ -4737,11 +4737,11 @@ Linker script and memory map
                 0x0000000020000014                m_nrf_log_balloc_log_mempool_logs_data_dynamic
                 0x0000000020000018                __log_dynamic_data_end__ = (__log_dynamic_data_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000018                __log_dynamic_data_size__ = SIZEOF (.log_dynamic_data)
-                0x0000000000002a44                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
+                0x0000000000002a48                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_load_start__ == __log_dynamic_data_load_end__) || ((__log_dynamic_data_load_end__ >= __FLASH_segment_start__) && (__log_dynamic_data_load_end__ <= __FLASH_segment_end__))), error: .log_dynamic_data is too large to fit in FLASH memory segment)
 
 .log_dynamic_data_run
-                0x0000000020000000       0x18 load address 0x0000000000002a2c
+                0x0000000020000000       0x18 load address 0x0000000000002a30
                 0x0000000020000000                __log_dynamic_data_run_start__ = .
                 0x0000000020000000                __start_log_dynamic_data = __log_dynamic_data_run_start__
                 0x0000000020000018                . = MAX ((__log_dynamic_data_run_start__ + SIZEOF (.log_dynamic_data)), .)
@@ -4762,72 +4762,72 @@ Linker script and memory map
                 0x0000000000000000                __nrf_sections_run_end_size__ = SIZEOF (.nrf_sections_run_end)
                 0x0000000020000018                __nrf_sections_run_end_load_end__ = __nrf_sections_run_end_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_run_end_start__ == __nrf_sections_run_end_end__) || ((__nrf_sections_run_end_end__ >= __RAM_segment_start__) && (__nrf_sections_run_end_end__ <= __RAM_segment_end__))), error: .nrf_sections_run_end is too large to fit in RAM memory segment)
-                0x0000000000002a44                __dtors_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
+                0x0000000000002a48                __dtors_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
 
-.dtors          0x0000000000002a44        0x0
-                0x0000000000002a44                __dtors_start__ = .
+.dtors          0x0000000000002a48        0x0
+                0x0000000000002a48                __dtors_start__ = .
  *(SORT(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x0000000000002a44                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x0000000000002a48                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x0000000000002a44                __dtors_load_end__ = __dtors_end__
+                0x0000000000002a48                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ >= __FLASH_segment_start__) && (__dtors_end__ <= __FLASH_segment_end__))), error: .dtors is too large to fit in FLASH memory segment)
-                0x0000000000002a44                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x0000000000002a48                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x0000000000002a44        0x0
-                0x0000000000002a44                __ctors_start__ = .
+.ctors          0x0000000000002a48        0x0
+                0x0000000000002a48                __ctors_start__ = .
  *(SORT(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT(.init_array.*))
-                0x0000000000002a44                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x0000000000002a48                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x0000000000002a44                __ctors_load_end__ = __ctors_end__
+                0x0000000000002a48                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ >= __FLASH_segment_start__) && (__ctors_end__ <= __FLASH_segment_end__))), error: .ctors is too large to fit in FLASH memory segment)
-                0x0000000000002a44                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x0000000000002a48                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x0000000000002a44      0x3cc
-                0x0000000000002a44                __rodata_start__ = .
+.rodata         0x0000000000002a48      0x3c8
+                0x0000000000002a48                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000000002a44       0x20 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
+ .rodata        0x0000000000002a48       0x20 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
  .rodata.nrf_log_backend_uart_api
-                0x0000000000002a64        0xc Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
-                0x0000000000002a64                nrf_log_backend_uart_api
+                0x0000000000002a68        0xc Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
+                0x0000000000002a68                nrf_log_backend_uart_api
  .rodata.nrf_log_frontend_dequeue.str1.1
-                0x0000000000002a70       0x11 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
+                0x0000000000002a74       0x11 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
  .rodata.str1.1
-                0x0000000000002a81       0x17 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
+                0x0000000000002a85       0x17 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_frontend.o
  .rodata.m_colors
-                0x0000000000002a98       0x24 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+                0x0000000000002a9c       0x24 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
  .rodata.nrf_log_hexdump_entry_process.str1.1
-                0x0000000000002abc        0xf Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+                0x0000000000002ac0        0xf Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
                                          0x11 (size before relaxing)
  .rodata.postfix_process.str1.1
-                0x0000000000002acb        0xf Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+                0x0000000000002acf        0xf Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
                                           0x3 (size before relaxing)
  .rodata.prefix_process.str1.1
-                0x0000000000002acb       0x32 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
- *fill*         0x0000000000002afd        0x3 
+                0x0000000000002acf       0x32 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+ *fill*         0x0000000000002b01        0x3 
  .rodata.severity_names
-                0x0000000000002b00       0x14 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+                0x0000000000002b04       0x14 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
  .rodata.str1.1
-                0x0000000000002b14       0x4b Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
+                0x0000000000002b18       0x4b Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_str_formatter.o
                                          0x51 (size before relaxing)
  .rodata.app_error_fault_handler.str1.1
-                0x0000000000002b5f       0x19 Output/sk6812_i2s_pca10040 Release/Obj/app_error_weak.o
+                0x0000000000002b63       0x19 Output/sk6812_i2s_pca10040 Release/Obj/app_error_weak.o
  .rodata._aV2C.7289
-                0x0000000000002b78       0x10 Output/sk6812_i2s_pca10040 Release/Obj/nrf_fprintf_format.o
+                0x0000000000002b7c       0x10 Output/sk6812_i2s_pca10040 Release/Obj/nrf_fprintf_format.o
  .rodata.str1.1
-                0x0000000000002b88        0x4 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_i2s.o
+                0x0000000000002b8c        0x4 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_i2s.o
  .rodata.str1.1
-                0x0000000000002b8c        0x4 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
+                0x0000000000002b90        0x4 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .rodata.str1.1
-                0x0000000000002b90        0x5 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
+                0x0000000000002b94        0x5 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .rodata.str1.1
-                0x0000000000002b95        0x6 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- *fill*         0x0000000000002b9b        0x5 
+                0x0000000000002b99        0x6 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
+ *fill*         0x0000000000002b9f        0x1 
  .rodata.delay_bytecode.7351
                 0x0000000000002ba0        0x6 Output/sk6812_i2s_pca10040 Release/Obj/main.o
  .rodata.main.str1.1
@@ -4891,7 +4891,7 @@ Linker script and memory map
                 0x0000000000002e04        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
                                           0xa (size before relaxing)
                 0x0000000000002e10                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x00000000000003cc                __rodata_size__ = SIZEOF (.rodata)
+                0x00000000000003c8                __rodata_size__ = SIZEOF (.rodata)
                 0x0000000000002e10                __rodata_load_end__ = __rodata_end__
 
 .rel.dyn        0x0000000000002e10        0x0
@@ -5195,7 +5195,7 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .comment       0x000000000000004c       0x4d Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
  .comment       0x000000000000004c       0x4d C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 3.34a/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi.a(libc2.o)
 
-.debug_line     0x0000000000000000     0x8ce3
+.debug_line     0x0000000000000000     0x8cd5
  .debug_line    0x0000000000000000      0x2b5 Output/sk6812_i2s_pca10040 Release/Obj/thumb_crt0.o
  .debug_line    0x00000000000002b5      0x64f Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_serial.o
  .debug_line    0x0000000000000904      0x888 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
@@ -5215,12 +5215,12 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_line    0x0000000000005d9c      0x6d8 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .debug_line    0x0000000000006474      0xc5c Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .debug_line    0x00000000000070d0      0xb61 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- .debug_line    0x0000000000007c31      0xc2f Output/sk6812_i2s_pca10040 Release/Obj/main.o
- .debug_line    0x0000000000008860       0xcb Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
- .debug_line    0x000000000000892b       0xd4 Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
- .debug_line    0x00000000000089ff      0x2e4 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+ .debug_line    0x0000000000007c31      0xc21 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+ .debug_line    0x0000000000008852       0xcb Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
+ .debug_line    0x000000000000891d       0xd4 Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
+ .debug_line    0x00000000000089f1      0x2e4 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
 
-.debug_info     0x0000000000000000    0x181aa
+.debug_info     0x0000000000000000    0x181e2
  .debug_info    0x0000000000000000       0xf6 Output/sk6812_i2s_pca10040 Release/Obj/thumb_crt0.o
  .debug_info    0x00000000000000f6      0xced Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_serial.o
  .debug_info    0x0000000000000de3     0x157b Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
@@ -5240,12 +5240,12 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_info    0x000000000000ebc2      0xcde Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .debug_info    0x000000000000f8a0     0x309d Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .debug_info    0x000000000001293d     0x2fb1 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- .debug_info    0x00000000000158ee     0x15b9 Output/sk6812_i2s_pca10040 Release/Obj/main.o
- .debug_info    0x0000000000016ea7      0x11b Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
- .debug_info    0x0000000000016fc2      0x11d Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
- .debug_info    0x00000000000170df     0x10cb Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+ .debug_info    0x00000000000158ee     0x15f1 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+ .debug_info    0x0000000000016edf      0x11b Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
+ .debug_info    0x0000000000016ffa      0x11d Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
+ .debug_info    0x0000000000017117     0x10cb Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
 
-.debug_abbrev   0x0000000000000000     0x395a
+.debug_abbrev   0x0000000000000000     0x3974
  .debug_abbrev  0x0000000000000000       0x12 Output/sk6812_i2s_pca10040 Release/Obj/thumb_crt0.o
  .debug_abbrev  0x0000000000000012      0x235 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_serial.o
  .debug_abbrev  0x0000000000000247      0x320 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
@@ -5265,10 +5265,10 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_abbrev  0x0000000000002680      0x29e Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .debug_abbrev  0x000000000000291e      0x51f Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .debug_abbrev  0x0000000000002e3d      0x4e0 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- .debug_abbrev  0x000000000000331d      0x40d Output/sk6812_i2s_pca10040 Release/Obj/main.o
- .debug_abbrev  0x000000000000372a       0x14 Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
- .debug_abbrev  0x000000000000373e       0x14 Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
- .debug_abbrev  0x0000000000003752      0x208 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+ .debug_abbrev  0x000000000000331d      0x427 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+ .debug_abbrev  0x0000000000003744       0x14 Output/sk6812_i2s_pca10040 Release/Obj/ses_nRF_Startup.o
+ .debug_abbrev  0x0000000000003758       0x14 Output/sk6812_i2s_pca10040 Release/Obj/ses_nrf52_Vectors.o
+ .debug_abbrev  0x000000000000376c      0x208 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
 
 .debug_aranges  0x0000000000000000      0x768
  .debug_aranges
@@ -5341,7 +5341,7 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_ranges  0x0000000000000cc8      0x258 Output/sk6812_i2s_pca10040 Release/Obj/main.o
  .debug_ranges  0x0000000000000f20       0x28 Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
 
-.debug_frame    0x0000000000000000     0x12d0
+.debug_frame    0x0000000000000000     0x12d8
  .debug_frame   0x0000000000000000       0x48 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_serial.o
  .debug_frame   0x0000000000000048       0xdc Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
  .debug_frame   0x0000000000000124       0x2c Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_default_backends.o
@@ -5360,10 +5360,10 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_frame   0x0000000000000c54       0x50 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .debug_frame   0x0000000000000ca4      0x21c Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .debug_frame   0x0000000000000ec0      0x17c Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- .debug_frame   0x000000000000103c      0x238 Output/sk6812_i2s_pca10040 Release/Obj/main.o
- .debug_frame   0x0000000000001274       0x5c Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
+ .debug_frame   0x000000000000103c      0x240 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+ .debug_frame   0x000000000000127c       0x5c Output/sk6812_i2s_pca10040 Release/Obj/system_nrf52.o
 
-.debug_loc      0x0000000000000000     0x6847
+.debug_loc      0x0000000000000000     0x687c
  .debug_loc     0x0000000000000000      0x145 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_serial.o
  .debug_loc     0x0000000000000145      0x218 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_backend_uart.o
  .debug_loc     0x000000000000035d       0x15 Output/sk6812_i2s_pca10040 Release/Obj/nrf_log_default_backends.o
@@ -5382,7 +5382,7 @@ OUTPUT(Output/Release/Exe/sk6812_i2s_pca10040.elf elf32-littlearm)
  .debug_loc     0x0000000000003ee2       0x9d Output/sk6812_i2s_pca10040 Release/Obj/nrfx_prs.o
  .debug_loc     0x0000000000003f7f     0x10b1 Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uart.o
  .debug_loc     0x0000000000005030      0xffe Output/sk6812_i2s_pca10040 Release/Obj/nrfx_uarte.o
- .debug_loc     0x000000000000602e      0x819 Output/sk6812_i2s_pca10040 Release/Obj/main.o
+ .debug_loc     0x000000000000602e      0x84e Output/sk6812_i2s_pca10040 Release/Obj/main.o
 
 .debug_pubnames
                 0x0000000000000000     0x418c

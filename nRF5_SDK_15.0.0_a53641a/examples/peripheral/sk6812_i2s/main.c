@@ -117,9 +117,11 @@ ret_code_t sk6812_i2s_init_mem() {
  * @brief Addresses written to the pointer registers TXD.PTR and RXD.PTR are double-buffered in hardware, and these double buffers are updated for every RXTXD.MAXCNT words
  */
 void data_handler(nrf_drv_i2s_buffers_t const * p_released, uint32_t status) {
+//    NRF_LOG_DEBUG("status: %d; p_tx_buffer: 0x%08X; p_rx_buffer: 0x%08X", status, p_released->p_tx_buffer, p_released->p_rx_buffer);
+
     // 'nrf_drv_i2s_next_buffers_set' is called directly from the handler
     // each time next buffers are requested, so data corruption is not expected.
-    ASSERT(p_released);
+//    ASSERT(p_released);
 
     // When the handler is called after the transfer has been stopped
     // (no next buffers are needed, only the used buffers are to be
@@ -139,10 +141,10 @@ void data_handler(nrf_drv_i2s_buffers_t const * p_released, uint32_t status) {
 /**
  * @brief Initializes the I2S interface for ~3.2MHz clock for SK6812
  */
-void sk6812_i2s_init() {
+ret_code_t sk6812_i2s_init() {
     nrf_drv_i2s_config_t config;     //= NRF_DRV_I2S_DEFAULT_CONFIG;
     config.sck_pin	= LED_SCK_PIN;	// Don't set NRF_DRV_I2S_PIN_NOT_USED for I2S_CONFIG_SCK_PIN. (The program will stack.) 
-    config.lrck_pin	= LED_LRCK_PIN; // I2S_CONFIG_LRCK_PIN
+    config.lrck_pin	= NRF_DRV_I2S_PIN_NOT_USED; //LED_LRCK_PIN; // I2S_CONFIG_LRCK_PIN
     config.mck_pin	= NRF_DRV_I2S_PIN_NOT_USED;
     config.sdout_pin	= LED_DIN_PIN;	// I2S_CONFIG_SDOUT_PIN
     config.sdin_pin	= NRF_DRV_I2S_PIN_NOT_USED;
@@ -154,9 +156,10 @@ void sk6812_i2s_init() {
     config.channels     = NRF_I2S_CHANNELS_STEREO;
     config.mck_setup    = NRF_I2S_MCK_32MDIV5;
     config.ratio        = NRF_I2S_RATIO_32X;
-    
     uint32_t err_code = nrf_drv_i2s_init(&config, data_handler);
-    APP_ERROR_CHECK(err_code);
+//    APP_ERROR_CHECK(err_code);
+    
+    return err_code;
 }
 
 
@@ -166,7 +169,7 @@ void sk6812_i2s_init() {
  * @brief 1 data byte  <--> 1 I2S word
  */
 uint32_t convert_byte_to_i2s_bits(uint8_t data_byte) {
-    uint32_t data_bits;
+    uint32_t data_bits = 0;
     
     // Set data_bits based on MSB, then left-shift data_byte
     for (int ii=0; ii < 8; ii++) {
@@ -198,17 +201,23 @@ void set_i2s_led_data() {
  */
 void send_i2s_led_data() {
     // Configure the I2S module and map IO pins
-    sk6812_i2s_init();
+    uint32_t err_code = sk6812_i2s_init();
     
-    // Configure TX data buffer
-    nrf_drv_i2s_buffers_t const initial_buffers = {
-	.p_tx_buffer = m_i2s_led_buffer_tx,
-	.p_rx_buffer = NULL
-    };
+    // Prevent starting a new data transfer if I2S already initialized
+    if (err_code == NRF_SUCCESS) {
+	// Configure TX data buffer
+	nrf_drv_i2s_buffers_t const initial_buffers = {
+	    .p_tx_buffer = m_i2s_led_buffer_tx,
+	    .p_rx_buffer = NULL
+	};
     
-    // Enable the I2S module and start data streaming
-    uint32_t err_code = nrf_drv_i2s_start(&initial_buffers, I2S_LEDS_FRAME_WORD_SIZE+1, 0);
-    APP_ERROR_CHECK(err_code);
+	// Enable the I2S module and start data streaming
+	err_code = nrf_drv_i2s_start(&initial_buffers, I2S_LEDS_FRAME_WORD_SIZE+1, 0);
+	APP_ERROR_CHECK(err_code);
+    } else {
+	// Reset to all I2S_SK6812_ZERO's
+	memset(m_i2s_led_buffer_tx, 0x88, I2S_LEDS_WORD_SIZE * 4);
+    }
 }
 
 void clear_leds() {
